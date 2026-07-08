@@ -1,0 +1,10 @@
+.DS_Store
+
+# Raw source assets (unoptimized originals, not needed for the deployed site)
+*.pdf
+/1月ママWebデザインI_宮﨑愛莉.jpg
+/Fammチョコレートフェアバナー.jpg
+/ひだまりベーグルデザインカンプ.jpg
+/マウスピース矯正バナー.jpg
+/ミールキット完成.jpg
+/happyball-1.png

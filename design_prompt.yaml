@@ -1,0 +1,93 @@
+# Abstracted design prompt
+# Source: visual impression of https://www.saiseikai.gr.jp/recruit/
+# Note: colors / mood / layout logic only. No literal copy, no site-specific
+# wording or content structure. Intended to be reusable on any unrelated site.
+
+design_prompt:
+
+  mood:
+    - warm
+    - calm
+    - trustworthy
+    - human-centered
+    - spacious
+    - understated (never loud/hard-sell)
+
+  palette:
+    base:
+      - name: ivory
+        hex: "#FDFBF2"
+        usage: primary page background
+      - name: warm_beige
+        hex: "#F5F0E5"
+        usage: secondary section background, alternate with base for rhythm
+      - name: white
+        hex: "#FFFFFF"
+        usage: card / content surfaces
+    text:
+      - name: charcoal
+        hex: "#333333"
+        usage: body text, near-black but never pure black
+      - name: warm_gray
+        hex: "#8A8272"
+        usage: secondary/sub text, captions
+    accent_primary:
+      - name: gold_bronze
+        hex: "#78603B"
+        usage: headings, eyebrow labels, key links, primary emphasis
+        rule: single dominant accent color, used sparingly and consistently
+    accent_gradient:
+      - name: spectrum_highlight
+        stops: ["#5B9BD5", "#6FCF97", "#F2C94C", "#F2994A"]
+        direction: horizontal
+        usage: one hero-level decorative moment only (e.g. a single word/title)
+        rule: never used in body text, buttons, or repeated elements
+
+  typography:
+    base_font: humanist sans-serif, Japanese-first (e.g. Noto Sans JP equivalent)
+    heading:
+      weight: medium-bold (500-700)
+      letter_spacing: wide (+0.05em ~ +0.08em)
+      scale: oversized display sizes for hero words, treated as graphic elements
+    body:
+      size: small-to-medium, comfortable
+      line_height: relaxed (~1.8)
+      letter_spacing: slightly open
+
+  layout:
+    whitespace: generous, airy, never cramped
+    hero:
+      style: full-bleed, one oversized decorative headline (can mix language/scale)
+      supporting_text: short, quiet, secondary in visual weight
+    rhythm: alternate base/beige/white section backgrounds to create pacing
+    composition: soft asymmetry over rigid boxy grids; occasional split (image/text) sections
+    photography:
+      role: primary visual language
+      treatment: real, natural light, soft edges, no heavy filters
+    illustration:
+      role: secondary accent only
+      style: flat, pastel, human figures, understated
+
+  components:
+    buttons:
+      shape: fully rounded (pill)
+      style: low-contrast outline or soft-filled, never harsh/high-saturation
+    micro_ui:
+      - small circular icon buttons (outline ring + arrow) for "view more" actions
+      - small-caps / letter-spaced eyebrow labels above headings
+    cards:
+      corners: soft rounded, not sharp
+      shadow: soft, warm-toned, never hard black drop shadow
+    motion:
+      style: subtle fade/slide on scroll or hover, nothing abrupt
+
+  texture:
+    - no pure black, no pure saturated neon
+    - avoid hard edges and heavy borders
+    - avoid dense/cluttered grids
+
+  avoid:
+    - copying literal text/copy from the source site
+    - copying exact page layout or section order
+    - domain-specific iconography (e.g. medical/hospital motifs)
+    - literal logo or brand marks
