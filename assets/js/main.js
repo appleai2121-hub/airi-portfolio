@@ -17,6 +17,10 @@ const lightboxImg = document.getElementById('lightboxImg');
 
 cards.forEach(c => {
   c.addEventListener('click', () => {
+    if (c.dataset.link) {
+      window.open(c.dataset.link, '_blank', 'noopener');
+      return;
+    }
     lightboxImg.src = c.dataset.full;
     lightbox.classList.add('open');
   });
