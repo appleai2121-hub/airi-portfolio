@@ -16,15 +16,29 @@ const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightboxImg');
 const lightboxClose = document.getElementById('lightboxClose');
 
+// Shared handler for activating a card (click or keyboard Enter/Space)
+function activateCard(c) {
+  if (c.dataset.link) {
+    window.open(c.dataset.link, '_blank', 'noopener,noreferrer');
+    return;
+  }
+  if (lightbox && lightboxImg && c.dataset.full) {
+    lightboxImg.src = c.dataset.full;
+    lightbox.classList.add('open');
+  }
+}
+
 cards.forEach(c => {
   c.addEventListener('click', () => {
-    if (c.dataset.link) {
-      window.open(c.dataset.link, '_blank', 'noopener');
-      return;
-    }
-    if (lightbox && lightboxImg && c.dataset.full) {
-      lightboxImg.src = c.dataset.full;
-      lightbox.classList.add('open');
+    activateCard(c);
+  });
+
+  c.addEventListener('keydown', e => {
+    // Let detail-link handle its own Enter key without bubbling to the card
+    if (e.target.classList.contains('detail-link')) return;
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      activateCard(c);
     }
   });
 });
