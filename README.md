@@ -11,6 +11,8 @@
 | `works.html` | 制作実績一覧(フィルター・ライトボックス機能付き) |
 | `works-happyball.html` | Happy Ball — 実在クライアント案件詳細 |
 | `works-hidamari-bagel.html` | ひだまりベーグル — 自主制作詳細 |
+| `works-wedding-invitation.html` | Web招待状 — 自主制作詳細 |
+| `works-atelier-lune.html` | atelier lune(ハンドメイド教室) — 自主制作詳細(全6ページのギャラリー形式) |
 | `works-freshers-fair.html` | フレッシャーズ応援フェア — 自主制作詳細 |
 | `works-famm-chocolate.html` | Famm Chocolate Fair — 自主制作詳細 |
 | `works-aligner-orthodontics.html` | マウスピース矯正モニター募集 — 自主制作詳細 |

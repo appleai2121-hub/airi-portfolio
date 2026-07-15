@@ -36,7 +36,9 @@ cards.forEach(c => {
   c.addEventListener('keydown', e => {
     // Let detail-link handle its own Enter key without bubbling to the card
     if (e.target.classList.contains('detail-link')) return;
-    if (e.key === 'Enter' || e.key === ' ') {
+    // Space activates buttons but should scroll the page for role="link" cards
+    const isLink = c.getAttribute('role') === 'link';
+    if (e.key === 'Enter' || (e.key === ' ' && !isLink)) {
       e.preventDefault();
       activateCard(c);
     }
@@ -50,7 +52,7 @@ document.querySelectorAll('.detail-link').forEach(link => {
   });
 });
 
-if (lightboxClose) {
+if (lightboxClose && lightbox) {
   lightboxClose.addEventListener('click', () => {
     lightbox.classList.remove('open');
   });

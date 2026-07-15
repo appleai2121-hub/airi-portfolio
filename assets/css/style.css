@@ -288,9 +288,55 @@ footer{
   border-radius:8px;
   padding:12px 20px;
   font-size:13px;
-  color:#78603b;
+  color:var(--accent);
   margin-bottom:40px;
   letter-spacing:0.03em;
+}
+
+/* Multi-page work gallery (e.g. a work with several page comps) */
+.gallery-intro{
+  color:var(--sub);
+  font-size:14px;
+  margin-bottom:24px;
+}
+.gallery-nav{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  list-style:none;
+  margin-bottom:56px;
+}
+.gallery-nav a{
+  display:inline-block;
+  border:1px solid var(--line);
+  background:#fff;
+  padding:8px 18px;
+  border-radius:999px;
+  font-size:12px;
+  letter-spacing:0.03em;
+  color:var(--sub);
+  transition:all .25s;
+}
+.gallery-nav a:hover{
+  background:var(--accent);
+  color:#fff;
+  border-color:var(--accent);
+}
+.gallery-item{
+  margin-bottom:64px;
+  scroll-margin-top:96px;
+}
+.gallery-item .page-num{
+  font-size:11px;
+  letter-spacing:0.2em;
+  color:var(--accent);
+  margin-bottom:8px;
+}
+.gallery-item h3{
+  font-size:16px;
+  font-weight:500;
+  margin-bottom:16px;
+  color:var(--ink);
 }
 
 /* External site button */
@@ -348,14 +394,14 @@ footer{
 
 @media (max-width:720px){
   .skill-groups{grid-template-columns:1fr;}
-  .detail-section{padding:56px 0;}
+  .detail-section,
+  .works-page-section{padding:56px 0;}
   .page-hero{padding:56px 0 40px;}
 }
 
 /* Focus indicators (WCAG 2.4.7) */
 a:focus-visible,
 button:focus-visible,
-.card:focus-visible,
 [tabindex="0"]:focus-visible{
   outline:2px solid var(--accent);
   outline-offset:2px;
