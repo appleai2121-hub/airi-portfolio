@@ -276,6 +276,7 @@ footer{
 }
 .detail-img{
   width:100%;
+  height:auto;
   border-radius:12px;
   margin-bottom:48px;
   border:1px solid var(--line);
